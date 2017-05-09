@@ -1,0 +1,11 @@
+#panelStyle, #panelStyleBalance {
+  margin-top: 10px;
+}
+
+.jumbotron {
+  margin-top: 50px;
+  text-align: center;
+}
+.main{
+  display: none;
+}

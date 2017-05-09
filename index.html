@@ -9,81 +9,115 @@
   </head>
 
   <body>
-    <div class="container">
-      <div class="jumbotron">
-        <h1>Bank Account</h1>
+    <div id="intro" class="container">
+      <div class=jumbotron>
+        <h1>First Bank of Epicodus</h1>
+        <form id="client">
+          <div class="form-group">
+            <label for="name">Enter your Name:</label>
+            <input class="form-control" type="text" id="clientName" value="">
+          </div>
+          <button type="submit" name="btn btn-client">Submit</button>
+        </form>
       </div>
     </div>
 
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6">
-          <h3>Register a new account:</h3>
-          <form id="newAccount">
-            <div class="form-group">
-              <label for="name">Name:</label>
-              <input class="form-control" type="text" id="name" value="">
-            </div>
-
-            <div class="radio">
-              <label>
-                <input type="radio" name="accountType" value="saving" checked>
-                Saving
-              </label>
-            </div>
-            <div class="radio">
-              <label>
-                <input type="radio" name="accountType" value="checking">
-                Checking
-              </label>
-            </div>
-            <div class="radio">
-              <label>
-                <input type="radio" name="accountType" value="moneyMarket">
-                Money Market
-              </label>
-            </div>
-
-            <div class="form-group">
-              <label for="name">Initial Deposit:</label>
-              <input class="form-control" type="text" id="initialFunds" value="">
-            </div>
-
-            <button id="btn-createAccount" type="submit" name="btn btn-createAccount">Create Account</button>
-          <!-- //</form> -->
+    <div class="main">
+      <div class="container ">
+        <div id="invitation" class="jumbotron">
+          <p>
+            Here is your bank accounts
+          </p>
         </div>
+      </div>
 
-        <div class="col-md-6">
-          <h3>Deposit or Withdraw funds:</h3>
-          <!-- <form id="accountFunds"> -->
-            <div class="form-group">
-              <label for="deposit">Deposit:</label>
-              <input class="form-control" type="text" name="name" id="deposit" value="">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <h3>Register a new account:</h3>
+            <form id="newAccount">
+              <div class="form-group">
+                <label for="name">Name:</label>
+                <input class="form-control" type="text" id="name" value="">
+              </div>
+
+              <div class="radio">
+                <label>
+                  <input type="radio" name="accountType" value="saving" checked>
+                  Saving
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="accountType" value="checking">
+                  Checking
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="accountType" value="moneyMarket">
+                  Money Market
+                </label>
+              </div>
+
+              <div class="form-group">
+                <label for="name">Initial Deposit:</label>
+                <input class="form-control" type="text" id="initialFunds" value="">
+              </div>
+
+              <button id="btn-createAccount" type="submit" name="btn btn-createAccount">Create Account</button>
+            </form>
+          </div>
+
+          <div class="col-md-6">
+            <br>
+            <h3>Select account</h3>
+            <select id="chooseAccount">
+              <!-- <option value="option"></option> -->
+            </select>
+            <br><br>
+            <h3>Deposit or Withdraw funds:</h3>
+            <form id="accountFunds">
+              <div class="form-group">
+                <label for="deposit">Deposit:</label>
+                <input class="form-control" type="text" name="name" id="deposit" value="">
+              </div>
+
+              <div class="form-group">
+                <label for="withdraw">Withdrawal:</label>
+                <input class="form-control" type="text" name="name" id="withdraw" value="">
+              </div>
+
+              <button id="btn-math" type="submit" name="btn btn-math">Submit</button>
+            </form>
+          </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div id="panelStyle" class="panel panel-default">
+              <div class="panel-heading">
+                <h3 class="panel-title">Current Accounts:</h3>
+                  <div class="panel-body">
+                    <ul id="accountList">
+
+                    </ul>
+                  </div>
+              </div>
             </div>
-            <br><br><br><br>
+          </div>
+          <div class="col-md-6">
+            <div id="panelStyleBalance" class="panel panel-default">
+              <div class="panel-heading">
+                <h3 class="panel-title">Current Balance:</h3>
+                  <div class="panel-body">
+                    <p id="displayBalance">
 
-            <div class="form-group">
-              <label for="withdraw">Withdrawal:</label>
-              <input class="form-control" type="text" name="name" id="withdraw" value="">
-            </div>
-
-            <button id="btn-math" type="submit" name="btn btn-math">Submit</button>
-          </form>
-        </div>
-      <div class="row">
-        <div class="col-md-12">
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              <h3 class="panel-title">Current Balance:</h3>
-                <div class="panel-body">
-                  <p>
-                    <span id="displayBalance"></span>
-                  </p>
-                </div>
+                    </p>
+                  </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+        </div>
       </div>
     </div>
   </body>
