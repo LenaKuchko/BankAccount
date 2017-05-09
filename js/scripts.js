@@ -25,8 +25,8 @@ $(document).ready(function() {
     $(".displayAccounts").last().click(function() {
       $("#displayBalance").text(bankAccount.balance);
     });
+
     $("#chooseAccount").append("<option value='" + (client.clientList.length-1).toString() + "'>" + bankAccount.name +"</option>" )
-    console.log(client.clientList.length-1);
   });
 
   $("#accountFunds").submit(function(event) {
